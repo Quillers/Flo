@@ -1,6 +1,24 @@
 <%- include("partials/header.ejs", categories) %>
 
 <!-- il faudrait construire la page avec les infos du profil utilisateur-->
+<div>
+    <h2>Mon Profil</h2>
+    <form action="/MyProfile/<%= user.id %>" method="POST">
+        <div>
+            <label for="username">Nom d'Utilisateur (3 à 12 caractères)</label>
+            <input type="text" name="username" id="username" minlength="3" maxlength="12" placeholder="<%= user.name %>">
+        </div>
+        <div>
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <label for="avatar_url">Avatar (merci de renseigner un lien valide vers une image)</label>
+            <input type="url" name="avatar_url" id="avatar_url" placeholder="<%= user.avatar_url %>">
+        </div>
+
+    </form>
+</div>
 
 
 <%- include("partials/footer.ejs") %> 

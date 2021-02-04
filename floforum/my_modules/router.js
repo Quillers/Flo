@@ -51,8 +51,7 @@ router.post('/topics/:categoryName/:topicName', postMW.validateResponseForm, pos
 /*
 ** MY PROFILE REQUEST
 */
-
-//TODO ne pas appeler profile.display mais une première fonction pour checker si l'utilisateur est connecté ou non. A voir avec Julien comment il compte gérer la connexion.
+// Call the profile.display method when a user try to reach /myProfile/:id
 router.get('/myProfile/:id', profile.display);
 
 module.exports = router;

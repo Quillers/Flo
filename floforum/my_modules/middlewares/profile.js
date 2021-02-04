@@ -20,6 +20,7 @@ const profile = {
         const userID = parseInt(request.params.id);
 
         // Check if the user is Logged : if he is, call findUser function, if he is not, redirect him to the login page
+        // TODO màj du test en fonction du login de Julien
 
         if (request.session.login === true) {
 
